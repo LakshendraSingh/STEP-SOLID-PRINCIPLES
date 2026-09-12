@@ -1,7 +1,8 @@
 package section3_lsp;
 
 /**
- * Section 3 - Subsection 3: Base Account class assuming all accounts are withdrawable
+ * Section 3 - Subsection 4: Account base abstraction
+ * Does NOT contain withdraw(), adhering to LSP and ISP.
  */
 public class Account {
     protected final int accountNumber;
@@ -17,12 +18,6 @@ public class Account {
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
-        }
-    }
-
-    public void withdraw(double amount) {
-        if (amount > 0 && balance >= amount) {
-            balance -= amount;
         }
     }
 
